@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor moedas</title>
+  <>
+  <script>
+    var valor = parseFloat(prompt("Insira um valor"));
+    var moeda = prompt("Para qual moeda deseja converter?\n1)Dolar\n2)Euro\n3)Libra");
+
+    switch(moeda){
+      case "1":
+        valor = Math.abs(valor) / 5.5;
+         valor = new Intl.NumberFormat("pt-BR", {style:"currency", currency:"USD"})
+              .format(valor);
+        document.write(`Conversao da moeda: ${valor}`)
+        break;
+      case "2":
+        valor = Math.abs(valor) / 6.5;
+        valor = new Intl.NumberFormat("pt-BR", {style:"currency", currency:"EUR"})
+              .format(valor);
+        document.write(`Conversao da moeda: ${valor}`)
+        break;
+      case "3":
+        valor = Math.abs(valor) / 8;
+        valor = new Intl.NumberFormat("pt-BR", {style:"currency", currency:"GBP"})
+              .format(valor);
+        document.write(`Conversao da moeda: ${valor}`)
+        break;
+      default:
+        document.write("Moeda invalida")
+        break;
+    }
+</script>
+  </>
+</head>
+<body>
+  
+</body>
+</html>
